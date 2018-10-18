@@ -20,10 +20,15 @@ internal class PGLevelIndicatorView: UIView {
     var shapeLayer = CAShapeLayer()
     var bezierPath = UIBezierPath()
     var level = Level.low
+    private var radius = CGFloat(0)
 
-    init(frame: CGRect, parameters: ItemParameters) {
-        super.init(frame: frame)
+    init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
 
+        let maximun = max(frame.width, frame.height)
+
+        super.init(frame: CGRect(origin: frame.origin, size: CGSize(width: maximun, height: maximun)))
+
+        self.radius = radius*maximun/3
         self.backgroundColor = UIColor.clear
         setCircle()
         label = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width/2, height: 20))
@@ -43,7 +48,7 @@ internal class PGLevelIndicatorView: UIView {
     }
 
     @objc func handleTap(sender: UITapGestureRecognizer? = nil) {
-        
+
         var endValue = 0.0
         switch level {
         case .low:
@@ -53,7 +58,7 @@ internal class PGLevelIndicatorView: UIView {
         case .high:
             endValue = 1.0
         }
-        
+
         let drawProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
 
         drawProgressAnimation.toValue = endValue
@@ -68,7 +73,7 @@ internal class PGLevelIndicatorView: UIView {
         let lineWidth = CGFloat(5.0)
         bezierPath = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.height/2,
                                                      y: self.frame.size.height/2),
-                                  radius: self.frame.size.height/3,
+                                  radius: radius,
                                   startAngle: 3*CGFloat.pi/2,
                                   endAngle: 2*CGFloat.pi,
                                   clockwise: false)
@@ -115,11 +120,10 @@ internal class PGLevelIndicatorView: UIView {
 
     private func setConstraints() {
 
-        NSLayoutConstraint.init(item: label!, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: self.frame.size.height/2-self.frame.size.height/3-(label?.frame.size.height)!/2).isActive = true
+        NSLayoutConstraint.init(item: label!, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: self.frame.size.height/2-radius-(label?.frame.size.height)!/2).isActive = true
         NSLayoutConstraint.init(item: label!, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.4, constant: 0).isActive = true
         NSLayoutConstraint.init(item: label!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20).isActive = true
         NSLayoutConstraint.init(item: label!, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: (self.frame.width/2+CGFloat(10))).isActive = true
-        //NSLayoutConstraint.init(item: label!, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 10).isActive = true
 
     }
 
