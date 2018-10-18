@@ -16,6 +16,8 @@ struct ItemParameters {
 
 class PGLevelIndicator: UIView {
 
+    private var levelIndicators = [PGLevelIndicatorView]()
+
     init(frame: CGRect, itemsParameters: [ItemParameters]) {
         super.init(frame: frame)
         let factor = 0.2
@@ -25,6 +27,7 @@ class PGLevelIndicator: UIView {
 
             let width = self.frame.size.width
             let levelIndicator = PGLevelIndicatorView(frame: CGRect(x: 0, y: 0, width: width, height: width), parameters: parameters, radius: CGFloat(total))
+            levelIndicators.append(levelIndicator)
             self.addSubview(levelIndicator)
             levelIndicator.translatesAutoresizingMaskIntoConstraints = false
             setConstraints(view: levelIndicator, factor: total)
@@ -47,6 +50,10 @@ class PGLevelIndicator: UIView {
 //        NSLayoutConstraint.init(item: view, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: CGFloat(factor), constant: 0).isActive = true
 //        NSLayoutConstraint.init(item: view, attribute: .height, relatedBy: .equal, toItem: self, attribute: .width, multiplier: CGFloat(factor), constant: 0).isActive = true
 
+    }
+    
+    public func setLevelValue(index: Int, value: Double) {
+        levelIndicators[index].setValue(value: value)
     }
 
 }

@@ -97,6 +97,10 @@ internal class PGLevelIndicatorView: UIView {
         self.layer.addSublayer(shapeLayer)
     }
 
+    public func setValue(value: Double) {
+        drawProgressAnimation(endValue: value)
+    }
+
     public func setLevel(level: Level) {
 
         var endValue = 0.0
@@ -108,16 +112,23 @@ internal class PGLevelIndicatorView: UIView {
         case .high:
             endValue = 1.0
         }
+        drawProgressAnimation(endValue: endValue)
+
+    }
+
+    private func drawProgressAnimation(endValue: Double) {
+
+        let value = endValue > 1 ? 0: endValue
+        
         let drawProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
 
-        drawProgressAnimation.toValue = endValue
+        drawProgressAnimation.toValue = value
         drawProgressAnimation.duration = 2
         drawProgressAnimation.fillMode = .forwards
         drawProgressAnimation.isRemovedOnCompletion = false
         shapeLayer.add(drawProgressAnimation, forKey: "drawline")
 
     }
-
     private func setConstraints() {
 
         NSLayoutConstraint.init(item: label!, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: self.frame.size.height/2-radius-(label?.frame.size.height)!/2).isActive = true
