@@ -112,10 +112,11 @@ internal class PGLevelIndicatorView: UIView {
         progressValue = 0
         shapeLayer.strokeEnd = 0
         progressIncrement = value/(duration*10)
-        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.test), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.updateShapeLayerStrokeEnd), userInfo: nil, repeats: true)
 
     }
-    @objc func test() {
+
+    @objc func updateShapeLayerStrokeEnd() {
         timeEleapse += timeInterval
         if timeEleapse > duration {
             timer?.invalidate()
