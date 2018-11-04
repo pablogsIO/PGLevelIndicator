@@ -11,6 +11,7 @@ import UIKit
 struct ItemParameters {
     var title: String
     var titleColor: UIColor
+    //Not used
     var level: Level
 }
 
