@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/language-swift-blue.svg)
 ![](https://img.shields.io/badge/version-1.0.0-red.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform](https://img.shields.io/cocoapods/p/PGLevelIndicator.svg?style=flat)](https://github.com/pablogsIO/PGLevelIndicator)
+[![Platform](https://img.shields.io/cocoapods/p/RecordButton.svg?style=flat)](https://github.com/pablogsIO/PGLevelIndicator)
 
 
 A swift component to show levels of whatever you want
