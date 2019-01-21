@@ -59,9 +59,10 @@ internal class PGLevelIndicatorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setTitleLabel(titleName: String, color: UIColor) {
+    private func setTitleLabel(titleName: NSAttributedString, color: UIColor) {
+
         title = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width/2, height: 20))
-        title?.text = titleName
+        title?.attributedText = titleName
         title?.textAlignment = .left
         title?.textColor = color
         self.addSubview(title!)

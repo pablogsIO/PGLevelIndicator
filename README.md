@@ -6,10 +6,10 @@
 [![Platform](https://img.shields.io/cocoapods/p/PGLevelIndicator.svg?style=flat)](https://github.com/pablogsIO/PGLevelIndicator)
 
 
-A swift component to show levels of whatever you want
+A swift component to show levels of whatever you want.
 
 <p align="center">
-  <img width="400" src="/Assets/pglevelindicator.gif">
+  <img width="300" src="/Assets/pglevelindicator.gif">
 </p>
 
 
@@ -19,15 +19,21 @@ A swift component to show levels of whatever you want
 
 ## Example Project
 
-You have a fully functional demo in PGLevelIndicator folder
+You have a fully functional demo in [PGLevelIndicator](https://github.com/pablogsIO/PGLevelIndicator/tree/master/PGLevelIndicator) folder
 
 ## Usage
 
-- Create an array of parameters:
-
+- Create attributed strings with the text you want
 
 ```swift
-let parameters = [ItemParameters(title: "nO2 Band", titleColor: UIColor.purple, level: .low), ItemParameters(title: "o3 Band", titleColor: UIColor.yellow, level: .medium), ItemParameters(title: "pM10 Band", titleColor: UIColor.green, level: .high), ItemParameters(title: "pM25 Band", titleColor: UIColor.orange, level: .low)]
+let attStringNO2: NSMutableAttributedString = NSMutableAttributedString(string: "NO2", attributes: [.font: font!])
+       attStringNO2.setAttributes([.font: fontSuper!, .baselineOffset: -5], range: NSRange(location: 2, length: 1))
+```
+
+- Create an array of parameters:
+
+```swift
+let parameters = [ItemParameters(title: attStringNO2, titleColor: UIColor.red, level: .low), ItemParameters(title: attStringO3, titleColor: UIColor.yellow, level: .medium), ItemParameters(title: attStringpM10, titleColor: UIColor.green, level: .high), ItemParameters(title: attStringPM25, titleColor: UIColor.orange, level: .low)]
 
 ```
 
@@ -40,7 +46,7 @@ let levelIndicator = PGLevelIndicator(frame: CGRect(x: 0, y: 100, width: self.vi
 
 ```
 
-- And finally, add to the main view
+- And finally, add the levelIndicator to the main view
 
 ```swift
 self.view.addSubview(levelIndicator!)
@@ -53,6 +59,6 @@ If you have any questions, please don't hesitate to create an issue.
 * Add Cocoapods
 
 ## License
-RecordButton is available under the MIT license. See the LICENSE file for more info.
+PGLevelIndicator is available under the MIT license. See the LICENSE file for more info.
 
 If you use it, I'll be happy to know about it.

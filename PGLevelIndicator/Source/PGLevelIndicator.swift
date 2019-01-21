@@ -9,7 +9,7 @@
 import UIKit
 
 struct ItemParameters {
-    var title: String
+    var title: NSAttributedString
     var titleColor: UIColor
     //Not used
     var level: Level
