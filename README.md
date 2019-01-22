@@ -9,7 +9,7 @@
 A swift component that shows levels of whatever you want.
 
 <p align="center">
-  <img width="600" src="/Assets/levelindicator.gif">
+  <img width="600" src="https://raw.githubusercontent.com/pablogsIO/PGLevelIndicator/master/Assets/levelindicator.gif">
 </p>
 
 
@@ -84,7 +84,7 @@ self.view.addSubview(levelIndicator!)
 And voilá....
 
 <p align="center">
-  <img width="600" src="/Assets/example.gif">
+  <img width="300" src="https://raw.githubusercontent.com/pablogsIO/PGLevelIndicator/master/Assets/example.gif">
 </p>
 
 ## Support/Issues
