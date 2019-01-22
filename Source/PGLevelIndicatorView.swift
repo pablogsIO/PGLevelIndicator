@@ -38,7 +38,7 @@ open class PGLevelIndicatorView: UIView {
     private let timeInterval = 0.1
     private var timeEleapse = 0.0
 
-    public init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
+    init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
 
         let maximun = max(frame.width, frame.height)
 

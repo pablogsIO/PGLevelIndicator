@@ -9,10 +9,10 @@
 import UIKit
 
 public struct ItemParameters {
-    var title: NSAttributedString
-    var titleColor: UIColor
+    public var title: NSAttributedString
+    public var titleColor: UIColor
     //Not used
-    var level: Level
+    public var level: Level
 }
 
 open class PGLevelIndicator: UIView {
