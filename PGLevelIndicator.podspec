@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '10.0'
   s.source_files = 'Source/*.swift'
   s.frameworks   = 'UIKit'
-  s.swift_version= '4.0'
+  s.swift_version= '4.2'
   s.requires_arc = true
   s.social_media_url = 'https://twitter.com/_pablogs_'
 end
