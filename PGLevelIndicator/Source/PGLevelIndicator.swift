@@ -15,7 +15,7 @@ struct ItemParameters {
     var level: Level
 }
 
-class PGLevelIndicator: UIView {
+public class PGLevelIndicator: UIView {
 
     private var levelIndicators = [PGLevelIndicatorView]()
 
