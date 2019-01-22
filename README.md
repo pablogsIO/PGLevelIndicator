@@ -15,7 +15,7 @@ A swift component that shows levels of whatever you want.
 
 ## Requirements
 
-- Swift 4.
+- Swift 4.2
 
 ## Example Project
 
@@ -90,8 +90,6 @@ And voilá....
 ## Support/Issues
 If you have any questions, please don't hesitate to create an issue.
 
-## To-Do
-* Add Cocoapods
 
 ## License
 PGLevelIndicator is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
