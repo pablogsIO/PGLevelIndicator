@@ -9,7 +9,7 @@
 A swift component that shows levels of whatever you want.
 
 <p align="center">
-  <img width="500" src="/Assets/levelindicator.gif">
+  <img width="600" src="/Assets/levelindicator.gif">
 </p>
 
 
@@ -21,7 +21,13 @@ A swift component that shows levels of whatever you want.
 
 You have a fully functional demo in [PGLevelIndicator](https://github.com/pablogsIO/PGLevelIndicator/tree/master/PGLevelIndicator) folder
 
-## Usage
+## Install
+
+### Manually
+
+Just drag and drop [Source](https://github.com/pablogsIO/PGLevelIndicator/tree/master/Source) folder in your project
+
+## Using PGLevelIndicator
 
 - Create attributed strings with the text you want
 
@@ -59,6 +65,6 @@ If you have any questions, please don't hesitate to create an issue.
 * Add Cocoapods
 
 ## License
-PGLevelIndicator is available under the MIT license. See the LICENSE file for more info.
+PGLevelIndicator is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 If you use it, I'll be happy to know about it.
