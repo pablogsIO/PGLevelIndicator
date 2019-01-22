@@ -8,13 +8,13 @@
 
 import UIKit
 
-enum Level {
+public enum Level {
     case low
     case medium
     case high
 }
 
-internal class PGLevelIndicatorView: UIView {
+open class PGLevelIndicatorView: UIView {
 
     private var title: UILabel?
     private var ringValue: UILabel?
@@ -38,7 +38,7 @@ internal class PGLevelIndicatorView: UIView {
     private let timeInterval = 0.1
     private var timeEleapse = 0.0
 
-    init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
+    public init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
 
         let maximun = max(frame.width, frame.height)
 
@@ -55,7 +55,7 @@ internal class PGLevelIndicatorView: UIView {
         level = parameters.level
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

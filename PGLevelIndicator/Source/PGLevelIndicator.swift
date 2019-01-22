@@ -8,18 +8,18 @@
 
 import UIKit
 
-struct ItemParameters {
+public struct ItemParameters {
     var title: NSAttributedString
     var titleColor: UIColor
     //Not used
     var level: Level
 }
 
-public class PGLevelIndicator: UIView {
+open class PGLevelIndicator: UIView {
 
     private var levelIndicators = [PGLevelIndicatorView]()
 
-    init(frame: CGRect, itemsParameters: [ItemParameters]) {
+    public init(frame: CGRect, itemsParameters: [ItemParameters]) {
         super.init(frame: frame)
         let factorIncrement = 0.2
         var factor = 1.0
@@ -36,7 +36,7 @@ public class PGLevelIndicator: UIView {
 
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

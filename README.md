@@ -27,6 +27,15 @@ You have a fully functional demo in [PGLevelIndicator](https://github.com/pablog
 
 Just drag and drop [Source](https://github.com/pablogsIO/PGLevelIndicator/tree/master/Source) folder in your project
 
+### Cocoapods
+
+```swift
+
+use_frameworks!
+pod 'PGLevelIndicator'
+
+```
+
 ## Using PGLevelIndicator
 
 - Create attributed strings with the text you want
