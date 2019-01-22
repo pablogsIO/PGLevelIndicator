@@ -14,7 +14,7 @@ public enum Level {
     case high
 }
 
-open class PGLevelIndicatorView: UIView {
+public class PGLevelIndicatorView: UIView {
 
     private var title: UILabel?
     private var ringValue: UILabel?

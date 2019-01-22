@@ -8,11 +8,11 @@
 
 import UIKit
 
-struct ItemParameters {
-    var title: NSAttributedString
-    var titleColor: UIColor
+public struct ItemParameters {
+    public var title: NSAttributedString
+    public var titleColor: UIColor
     //Not used
-    var level: Level
+    public var level: Level
 }
 
 public class PGLevelIndicator: UIView {
@@ -36,7 +36,7 @@ public class PGLevelIndicator: UIView {
 
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
