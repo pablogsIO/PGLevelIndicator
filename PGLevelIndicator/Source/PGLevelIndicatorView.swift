@@ -38,7 +38,7 @@ public class PGLevelIndicatorView: UIView {
     private let timeInterval = 0.1
     private var timeEleapse = 0.0
 
-    init(frame: CGRect, parameters: ItemParameters, radius: CGFloat) {
+    init(frame: CGRect, title: NSAttributedString, titleColor: UIColor, radius: CGFloat) {
 
         let maximun = max(frame.width, frame.height)
 
@@ -47,12 +47,12 @@ public class PGLevelIndicatorView: UIView {
         self.radius = radius*maximun/3
         self.backgroundColor = UIColor.clear
         setCircle()
-        setTitleLabel(titleName: parameters.title, color: parameters.titleColor)
-        setRingValueLabel(color: parameters.titleColor)
+        setTitleLabel(titleName: title, color: titleColor)
+        setRingValueLabel(color: titleColor)
         setConstraints()
         setRingValueLabelConstraints()
-        shapeLayer.strokeColor = parameters.titleColor.cgColor
-        level = parameters.level
+        shapeLayer.strokeColor = titleColor.cgColor
+        //level = parameters.level
     }
 
     required public init?(coder aDecoder: NSCoder) {

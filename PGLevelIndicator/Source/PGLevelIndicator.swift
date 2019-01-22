@@ -26,7 +26,8 @@ public class PGLevelIndicator: UIView {
         for parameters in itemsParameters {
 
             let width = self.frame.size.width
-            let levelIndicator = PGLevelIndicatorView(frame: CGRect(x: 0, y: 0, width: width, height: width), parameters: parameters, radius: CGFloat(factor))
+            let frame = CGRect(x: 0, y: 0, width: width, height: width)
+            let levelIndicator = PGLevelIndicatorView(frame: frame, title: parameters.title, titleColor: parameters.titleColor, radius: CGFloat(factor))
             levelIndicators.append(levelIndicator)
             self.addSubview(levelIndicator)
             levelIndicator.translatesAutoresizingMaskIntoConstraints = false
