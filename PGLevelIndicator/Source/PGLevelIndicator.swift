@@ -19,7 +19,7 @@ open class PGLevelIndicator: UIView {
 
     private var levelIndicators = [PGLevelIndicatorView]()
 
-    public init(frame: CGRect, itemsParameters: [ItemParameters]) {
+    init(frame: CGRect, itemsParameters: [ItemParameters]) {
         super.init(frame: frame)
         let factorIncrement = 0.2
         var factor = 1.0
