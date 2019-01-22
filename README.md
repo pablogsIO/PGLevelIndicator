@@ -81,6 +81,12 @@ self.view.addSubview(levelIndicator!)
 
 ```
 
+And voilá....
+
+<p align="center">
+  <img width="600" src="/Assets/example.gif">
+</p>
+
 ## Support/Issues
 If you have any questions, please don't hesitate to create an issue.
 
