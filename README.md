@@ -9,7 +9,7 @@
 A swift component that shows levels of whatever you want.
 
 <p align="center">
-  <img width="300" src="/Assets/levelindicator.gif">
+  <img width="500" src="/Assets/levelindicator.gif">
 </p>
 
 
