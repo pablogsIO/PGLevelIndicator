@@ -9,10 +9,17 @@
 import UIKit
 
 public struct ItemParameters {
-    public var title: NSAttributedString
-    public var titleColor: UIColor
+    var title: NSAttributedString
+    var titleColor: UIColor
     //Not used
-    public var level: Level
+    var level: Level
+
+    public init(title: NSAttributedString, titleColor: UIColor, level: Level) {
+        self.title = title
+        self.titleColor = titleColor
+        self.level = level
+    }
+
 }
 
 public class PGLevelIndicator: UIView {
@@ -26,7 +33,8 @@ public class PGLevelIndicator: UIView {
         for parameters in itemsParameters {
 
             let width = self.frame.size.width
-            let levelIndicator = PGLevelIndicatorView(frame: CGRect(x: 0, y: 0, width: width, height: width), parameters: parameters, radius: CGFloat(factor))
+            let frame = CGRect(x: 0, y: 0, width: width, height: width)
+            let levelIndicator = PGLevelIndicatorView(frame: frame, title: parameters.title, titleColor: parameters.titleColor, radius: CGFloat(factor))
             levelIndicators.append(levelIndicator)
             self.addSubview(levelIndicator)
             levelIndicator.translatesAutoresizingMaskIntoConstraints = false
