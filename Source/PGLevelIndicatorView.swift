@@ -14,7 +14,7 @@ public enum Level {
     case high
 }
 
-public class PGLevelIndicatorView: UIView {
+internal class PGLevelIndicatorView: UIView {
 
     private var title: UILabel?
     private var ringValue: UILabel?
@@ -52,10 +52,10 @@ public class PGLevelIndicatorView: UIView {
         setConstraints()
         setRingValueLabelConstraints()
         shapeLayer.strokeColor = parameters.titleColor.cgColor
-        level = parameters.level
+        //level = parameters.level
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

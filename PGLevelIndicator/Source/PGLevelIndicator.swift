@@ -22,11 +22,11 @@ public struct ItemParameters {
 
 }
 
-public class PGLevelIndicator: UIView {
+open class PGLevelIndicator: UIView {
 
     private var levelIndicators = [PGLevelIndicatorView]()
 
-    init(frame: CGRect, itemsParameters: [ItemParameters]) {
+    public init(frame: CGRect, itemsParameters: [ItemParameters]) {
         super.init(frame: frame)
         let factorIncrement = 0.2
         var factor = 1.0
@@ -34,7 +34,7 @@ public class PGLevelIndicator: UIView {
 
             let width = self.frame.size.width
             let frame = CGRect(x: 0, y: 0, width: width, height: width)
-            let levelIndicator = PGLevelIndicatorView(frame: frame, title: parameters.title, titleColor: parameters.titleColor, radius: CGFloat(factor))
+            let levelIndicator = PGLevelIndicatorView(frame: frame, parameters: parameters, radius: CGFloat(factor))
             levelIndicators.append(levelIndicator)
             self.addSubview(levelIndicator)
             levelIndicator.translatesAutoresizingMaskIntoConstraints = false
