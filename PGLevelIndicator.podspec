@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGLevelIndicator"
-  s.version      = "1.0.5"
+  s.version      = "1.1.0"
   s.summary      = "Fancy and beautiful level indicator component for you awesome apps!"
   s.homepage     = "https://github.com/pablogsIO/PGLevelIndicator"
   s.license      = 'MIT'
